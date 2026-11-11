@@ -1,1 +1,127 @@
+# Análise de Desperdício de Alimentos
 
+## 1. Objetivo do projeto
+
+O objetivo deste projeto é realizar uma análise exploratória de dados (EDA) sobre o desperdício de alimentos, utilizando Python para identificar quais produtos apresentam os maiores volumes de desperdício.
+
+A análise busca organizar os dados, verificar sua qualidade, identificar os alimentos com maiores quantidades desperdiçadas e apresentar os resultados por meio de visualizações gráficas.
+
+## 2. Coleta de dados
+
+Os dados foram obtidos por meio de uma planilha Excel chamada `dados_desperdicio_de_alimentos.xlsx`.
+
+Para realizar a leitura da planilha, foi utilizada a biblioteca **Pandas**, responsável pela manipulação e análise de dados.
+
+```python
+df = pd.read_excel(
+    'dados_desperdicio_de_alimentos.xlsx',
+    header=1
+)
+```
+
+O parâmetro `header=1` indica que a segunda linha da planilha será utilizada como cabeçalho das colunas.
+
+## 3. Tratamento e preparação dos dados
+
+Após a importação, foi realizada uma análise inicial da estrutura da base de dados.
+
+Foram utilizados os seguintes comandos:
+
+- `df.head(10)`: apresenta as dez primeiras linhas da planilha.
+- `df.info()`: apresenta informações sobre as colunas, os tipos de dados e os valores não nulos.
+- `df.dropna(how='all')`: remove linhas completamente vazias.
+- `df.isnull().sum().sum()`: contabiliza a quantidade total de valores nulos.
+- `df.duplicated().sum()`: identifica a quantidade de registros duplicados.
+- `df.drop_duplicates()`: remove registros duplicados.
+
+Essas etapas ajudam a melhorar a qualidade dos dados antes da realização das análises.
+
+## 4. Análise exploratória dos dados (EDA)
+
+### 4.1. Identificação dos 50 alimentos mais desperdiçados
+
+Para identificar os alimentos com maior quantidade de desperdício, foi utilizado o agrupamento por produto, somando os valores da coluna `Quantidade desperdiçada (kg)`.
+
+O resultado foi organizado em ordem decrescente, selecionando os 50 produtos com os maiores volumes de desperdício.
+
+```python
+top_50 = (
+    df.groupby('Produto')['Quantidade desperdiçada (kg)']
+    .sum()
+    .sort_values(ascending=False)
+    .head(50)
+    .reset_index()
+)
+```
+
+As colunas foram renomeadas para facilitar a interpretação dos resultados:
+
+- **Alimento:** nome do produto analisado.
+- **Total desperdiçado (kg):** quantidade total desperdiçada daquele alimento, em quilogramas.
+
+Posteriormente, o resultado foi exportado para uma nova planilha Excel, permitindo sua utilização em outras ferramentas de análise.
+
+Arquivo gerado: `top_50_alimentos_desperdicados.xlsx`.
+
+### 4.2. Análise dos 10 alimentos mais desperdiçados
+
+Também foi realizado um agrupamento dos produtos para identificar os dez alimentos com maior quantidade total desperdiçada.
+
+Essa análise utiliza a mesma lógica de agrupamento e soma aplicada ao Top 50, porém limita o resultado aos dez primeiros produtos.
+
+## 5. Visualização dos dados
+
+Para apresentar os resultados, foi utilizada a biblioteca **Plotly Express**, responsável pela criação de gráficos interativos.
+
+### Gráfico de pizza
+
+Foi desenvolvido um gráfico de pizza com o objetivo de representar a participação dos dez alimentos mais desperdiçados em relação à soma das quantidades desses dez produtos.
+
+O parâmetro `hole=0.3` transforma o gráfico em um modelo de rosca (*Donut Chart*), facilitando a visualização das categorias.
+
+```python
+fig_pie = px.pie(
+    desperdicio,
+    values="Quantidade desperdiçada (kg)",
+    names="Produto",
+    title="Top 10 alimentos mais desperdiçados",
+    hole=0.3
+)
+
+fig_pie.show()
+```
+
+O gráfico permite comparar visualmente a contribuição de cada alimento dentro do grupo selecionado.
+
+## 6. Bibliotecas utilizadas
+
+| Biblioteca | Finalidade |
+|---|---|
+| Statistics | Disponibiliza funções estatísticas. |
+| Pandas | Leitura, limpeza, organização e análise dos dados. |
+| Plotly Express | Criação de gráficos interativos. |
+| Dash | Desenvolvimento de aplicações e dashboards interativos. |
+
+**Observação:** neste código, `statistics` e os componentes de `Dash` foram importados, mas ainda não foram utilizados efetivamente.
+
+## 7. Resultados esperados
+
+Ao executar o código, são gerados os seguintes resultados:
+
+1. Visualização das primeiras linhas da base de dados.
+2. Informações sobre a estrutura e os tipos das colunas.
+3. Identificação de valores nulos e registros duplicados.
+4. Remoção de linhas vazias e registros duplicados.
+5. Identificação dos 50 alimentos com maior quantidade total desperdiçada.
+6. Exportação do resultado Top 50 para Excel.
+7. Criação de um gráfico de rosca com os dez alimentos mais desperdiçados.
+
+## 8. Conclusão
+
+A utilização do Python permitiu estruturar um processo de análise exploratória dos dados sobre desperdício de alimentos, desde a leitura e preparação da planilha até a identificação dos produtos com maiores quantidades desperdiçadas.
+
+A análise do Top 50 possibilita reconhecer quais alimentos concentram os maiores volumes de desperdício, enquanto o gráfico dos dez principais produtos facilita a comparação visual entre eles.
+
+Essas informações podem apoiar decisões relacionadas ao controle de estoque, armazenamento adequado e planejamento de compras, contribuindo para a redução de perdas de alimentos.
+
+Os resultados também podem ser utilizados em ferramentas de Business Intelligence, como o Looker Studio, para desenvolver dashboards interativos e acompanhar os indicadores de desperdício.
