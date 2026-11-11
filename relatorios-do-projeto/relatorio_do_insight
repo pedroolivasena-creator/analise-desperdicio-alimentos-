@@ -1,0 +1,63 @@
+1. Resumo dos principais achados da análise
+
+A análise exploratória de dados (EDA) sobre o desperdício de alimentos tem como principal objetivo identificar padrões, comportamentos e possíveis fatores que contribuem para a perda de alimentos.
+
+Durante a análise, foram consideradas informações relacionadas às quantidades desperdiçadas, categorias de alimentos, condições de armazenamento e demais características presentes na base de dados.
+
+A utilização de estatísticas descritivas e visualizações gráficas permite identificar quais alimentos apresentam maiores índices de desperdício, compreender a distribuição das perdas e investigar possíveis relações entre o armazenamento inadequado e o descarte de produtos.
+
+Entre os principais pontos investigados, destacam-se:
+
+Quantidade desperdiçada: identificação dos alimentos e categorias que apresentam maiores volumes de desperdício.
+
+Armazenamento inadequado: investigação da possível relação entre as condições de armazenamento e as perdas de alimentos.
+
+Distribuição do desperdício: identificação de padrões e diferenças entre os tipos de alimentos analisados.
+
+Fatores associados às perdas: avaliação de possíveis variáveis que contribuem para o aumento do desperdício.
+
+2. Relevância dos achados para a problemática
+
+O desperdício de alimentos representa um problema econômico, social e ambiental. A perda de produtos significa também desperdício dos recursos utilizados em sua produção, transporte, armazenamento e distribuição.
+
+Os resultados da análise exploratória são importantes porque permitem compreender melhor onde estão concentradas as perdas e quais fatores merecem maior atenção.
+
+A identificação dos alimentos com maiores quantidades desperdiçadas pode auxiliar na revisão dos processos de compra, armazenamento e distribuição.
+
+Além disso, investigar as condições de armazenamento permite avaliar se práticas inadequadas podem estar contribuindo para o aumento das perdas.
+
+Dessa forma, a análise dos dados transforma informações que poderiam passar despercebidas em indicadores relevantes para a tomada de decisões.
+
+3. Sugestões de ações e soluções
+
+Com base nos objetivos da análise, algumas medidas podem ser adotadas para reduzir o desperdício de alimentos:
+
+1. Melhorar as condições de armazenamento
+
+Adotar procedimentos adequados de conservação, respeitando as necessidades específicas de cada categoria de alimento.
+
+2. Implementar controle de estoque
+
+Monitorar regularmente as quantidades disponíveis, evitando compras excessivas e o acúmulo de produtos que podem perder a validade.
+
+3. Priorizar alimentos com maiores índices de desperdício
+
+Identificar os produtos que apresentam maiores perdas e desenvolver estratégias específicas para reduzir seu descarte.
+
+4. Melhorar o planejamento de compras
+
+Utilizar dados históricos de consumo e desperdício para estabelecer quantidades de compra mais adequadas à demanda.
+
+5. Monitorar os indicadores de desperdício
+
+Acompanhar periodicamente a quantidade de alimentos desperdiçados, permitindo identificar melhorias ou aumentos nas perdas.
+
+4. Conclusão
+
+A análise exploratória de dados demonstra como a utilização de ferramentas de análise pode contribuir para compreender e enfrentar o problema do desperdício de alimentos.
+
+Por meio da organização, exploração e visualização dos dados, é possível identificar padrões relevantes, investigar fatores associados às perdas e desenvolver estratégias para melhorar a gestão dos alimentos.
+
+Conclui-se que a análise de dados representa uma ferramenta importante para apoiar decisões mais eficientes, reduzir desperdícios, otimizar recursos e incentivar práticas de consumo e armazenamento mais sustentáveis.
+
+A continuidade desse acompanhamento pode contribuir para que as decisões sejam cada vez mais fundamentadas em evidências, permitindo avaliar a eficiência das medidas adotadas ao longo do tempo.

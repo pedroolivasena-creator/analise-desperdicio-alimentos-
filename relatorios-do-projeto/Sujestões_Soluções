@@ -1,0 +1,27 @@
+Conclusão Geral – Análise de Dados sobre o Desperdício de Alimentos
+
+O desenvolvimento deste projeto permitiu compreender como a análise de dados pode contribuir para identificar padrões, investigar problemas e apoiar a tomada de decisões relacionadas ao desperdício de alimentos.
+
+A utilização do Python foi fundamental na etapa de exploração e tratamento dos dados. Por meio das bibliotecas Pandas, Statistics, Matplotlib e Plotly, foi possível organizar as informações, realizar cálculos estatísticos, identificar os alimentos com maiores quantidades desperdiçadas e analisar indicadores como média, mediana e distribuição das perdas. Essa etapa permitiu compreender melhor o comportamento dos dados e identificar os principais pontos de atenção.
+
+Complementando essa análise, o Looker Studio foi utilizado para desenvolver um dashboard interativo, transformando os resultados obtidos no Python em visualizações de fácil interpretação. Por meio de gráficos, indicadores, tabelas e filtros por produtos, tornou-se possível comparar as quantidades desperdiçadas, identificar as categorias mais representativas e facilitar a consulta das informações.
+
+A integração dessas duas ferramentas proporcionou uma visão mais ampla do problema, permitindo que a análise técnica realizada no Python fosse apresentada de maneira visual e acessível por meio do Looker Studio.
+
+Decisões e recomendações obtidas com a análise
+
+Com base nas possibilidades de interpretação dos resultados, destacam-se algumas decisões importantes:
+
+Priorizar os alimentos com maiores índices de desperdício: direcionar ações de prevenção aos produtos que concentram as maiores perdas.
+
+Melhorar o controle de estoque: utilizar os dados históricos para ajustar as quantidades de compra e evitar o excesso de produtos.
+
+Aprimorar as condições de armazenamento: investigar possíveis associações entre armazenamento inadequado e aumento do desperdício.
+
+Monitorar os indicadores de desempenho: acompanhar periodicamente a média e o volume total de alimentos desperdiçados.
+
+Utilizar dashboards para apoiar decisões: manter o Looker Studio atualizado para facilitar o acompanhamento dos resultados e identificar mudanças nos padrões de desperdício.
+
+Conclui-se que a combinação entre Python e Looker Studio representa uma abordagem eficiente para projetos de análise de dados. Enquanto o Python oferece recursos para tratamento, exploração e interpretação estatística, o Looker Studio facilita a comunicação dos resultados e o acompanhamento dos indicadores.
+
+Dessa forma, o projeto demonstra que a análise de dados vai além da geração de gráficos e cálculos: ela permite transformar informações em conhecimento e apoiar decisões mais conscientes, contribuindo para a redução do desperdício de alimentos, a otimização de recursos e a adoção de práticas mais sustentáveis.
